@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/script.js" defer></script>
+  <title>Frontend Mentor | E-commerce product page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+</head>
+
+<body>
+  <main class="ecommerce-wrapper">
+    <header class="sneakers-head">
+      <div class="sneakers-branding">
+        <img src="./images/logo.svg" alt="Sneakers Company Logo" class="sneakers-logo">
+      </div>
+      <nav class="primary-navigation" aria-expanded="false">
+        <div class="menu-ctl">
+          <img class="nav-btn nav-open-btn" src="./images/icon-menu.svg" alt="Open Navigation Button">
+          <img class="nav-btn nav-close-btn" src="./images/icon-close.svg" alt="Close Navigation Button">
+        </div>
+        <ul class="nav-options">
+          <li class="navitem">Collections</li>
+          <li class="navitem">Men</li>
+          <li class="navitem">Women</li>
+          <li class="navitem">About</li>
+          <li class="navitem">Contact</li>
+        </ul>
+      </nav>
+
+      <div class="shopping-cart" aria-expanded="false">
+        <img src="./images/icon-cart.svg" alt="My Shopping Cart">
+      </div>
+      <div class="avatar">
+        <img src="./images/image-avatar.png" alt="Menu Navigation" class="user-avatar">
+      </div>
+
+    </header>
+    <div class="product-carousel">
+      <div class="carousel-images">
+        <img src="./images/image-product-1.jpg" class="product-carousel-image image-holder-1" data-current="true"
+          alt="Sneaker Product Shot 1 of 4"></img>
+        <img src="./images/image-product-2.jpg" class="product-carousel-image image-holder-2" data-current="false"
+          alt="Sneaker Product Shot 2 of 4"></img>
+        <img src="./images/image-product-3.jpg" class="product-carousel-image image-holder-3" data-current="false"
+          alt="Sneaker Product Shot 3 of 4"></img>
+        <img src="./images/image-product-4.jpg" class="product-carousel-image image-holder-4" data-current="false"
+          alt="Sneaker Product Shot 4 of 4"></img>
+        <div class="btn-control-wrapper btn-left">
+          <img class="btn-controls btn-previous" src="./images/icon-previous.svg" alt="Previous product image.">
+        </div>
+        <div class="btn-control-wrapper btn-right">
+          <img class="btn-controls btn-previous" src="./images/icon-next.svg" alt="Next product image.">
+        </div>
+      </div>
+      <!-- thumbnail carousel -->
+      <div class="carousel-thumbs">
+        <div class="thumb" data-current="true">
+          <img src="./images/image-product-1-thumbnail.jpg" alt="" class="thumb-img" >
+        </div>
+        <div class="thumb" data-current="false">
+          <img src="./images/image-product-2-thumbnail.jpg" alt="" class="thumb-img" >
+        </div>
+        <div class="thumb" data-current="false">
+          <img src="./images/image-product-3-thumbnail.jpg" alt="" class="thumb-img">
+        </div>
+        <div class="thumb" data-current="false">
+          <img src="./images/image-product-4-thumbnail.jpg" alt="" class="thumb-img">
+        </div>
+      </div>
+    </div>
+    <section class="product-information">
+      <h5 class="sneakers-title">Sneaker Company</h5>
+      <h1 class="product-title">Fall Limited Edition Sneakers</h1>
+      <p class="product-description">These low-profile sneakers are your perfect casual wear companion. Featuring a
+        durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+
+      <div class="product-pricing">
+        <div class="price-n-discount">
+          <div class="product-price">$<span class="price-value">125.00</span></div>
+          <div class="discount">50%</div>
+        </div>
+        <span class="product-offer">$250.00</span>
+      </div>
+
+      <div class="prod-quantity-wrapper">
+        <div class="product-quantity">
+          <img class="dec-qty" src="./images/icon-minus.svg" alt="Increase the quantity.">
+          <span class="product-qty">0</span>
+          <img class="inc-qty" src="./images/icon-plus.svg" alt="Increase the quantity.">
+        </div>
+        <button class="add-2-cart">
+          <svg class="cart-icon" width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+              fill="#fff" fill-rule="nonzero" />
+          </svg>
+          Add to cart
+        </button>
+      </div>
+    </section>
+    <footer class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">John Carruthers</a>.
+    </footer>
+    <div class="mycart-wrapper" aria-expanded="false">
+      <div class="mycart">
+        <p class="mycart-title">Cart</p>
+        <div class="mycart-contents">
+          Your cart is empty.
+        </div>
+        <button class="mycart-checkout">Checkout</button>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
