@@ -37,7 +37,7 @@
         </ul>
       </nav>
 
-      <div class="shopping-cart" aria-expanded="false">
+      <div class="shopping-cart" data-cart="false">
         <img src="./images/icon-cart.svg" alt="My Shopping Cart">
       </div>
       <div class="avatar">
@@ -123,5 +123,40 @@
     </div>
   </main>
 </body>
-
+<div class="floating-carousel" data-visible="false">
+  <div class="product-carousel-2">
+    <div class="close-carousel"><img src="./images/icon-close.svg" alt="Close Carousel"></div>
+    <div class="carousel-images-2">
+      <img src="./images/image-product-1.jpg" class="product-carousel-image-2 image-holder-1" data-current="true"
+        alt="Sneaker Product Shot 1 of 4"></img>
+      <img src="./images/image-product-2.jpg" class="product-carousel-image-2 image-holder-2" data-current="false"
+        alt="Sneaker Product Shot 2 of 4"></img>
+      <img src="./images/image-product-3.jpg" class="product-carousel-image-2 image-holder-3" data-current="false"
+        alt="Sneaker Product Shot 3 of 4"></img>
+      <img src="./images/image-product-4.jpg" class="product-carousel-image-2 image-holder-4" data-current="false"
+        alt="Sneaker Product Shot 4 of 4"></img>
+      <div class="btn-control-wrapper btn-left-2">
+        <img class="btn-controls btn-previous" src="./images/icon-previous.svg" alt="Previous product image.">
+      </div>
+      <div class="btn-control-wrapper btn-right-2">
+        <img class="btn-controls btn-previous" src="./images/icon-next.svg" alt="Next product image.">
+      </div>
+    </div>
+    <!-- thumbnail carousel -->
+    <div class="carousel-thumbs-2">
+      <div class="thumb-2" data-current="true">
+        <img src="./images/image-product-1-thumbnail.jpg" alt="" class="thumb-img-2" >
+      </div>
+      <div class="thumb-2" data-current="false">
+        <img src="./images/image-product-2-thumbnail.jpg" alt="" class="thumb-img-2" >
+      </div>
+      <div class="thumb-2" data-current="false">
+        <img src="./images/image-product-3-thumbnail.jpg" alt="" class="thumb-img-2">
+      </div>
+      <div class="thumb-2" data-current="false">
+        <img src="./images/image-product-4-thumbnail.jpg" alt="" class="thumb-img-2">
+      </div>
+    </div>
+  </div>
+</div>
 </html>
