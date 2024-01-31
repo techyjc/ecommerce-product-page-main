@@ -351,8 +351,8 @@ add2basket.addEventListener("click", (e) => {
 });
 
 my_basket.addEventListener('mouseover', (e) => {
-    if (cart_wrapper.getAttribute("aria-expanded") == 'false') {
-        cart_wrapper.setAttribute("aria-expanded", "true");
+    if (cart_wrapper.getAttribute("data-visible") == 'false') {
+        cart_wrapper.setAttribute("data-visible", "true");
     }
 })
 
@@ -360,8 +360,8 @@ cart_wrapper.addEventListener('touchstart', (e) => {
     let outside = document.querySelector('.ecommerce-wrapper');
     outside.addEventListener('touchstart', (evt) => {
         if (!evt.target.closest('.mycart')) {
-            if (cart_wrapper.getAttribute("aria-expanded") == 'true') {
-                cart_wrapper.setAttribute("aria-expanded", "false");
+            if (cart_wrapper.getAttribute("data-visible") == 'true') {
+                cart_wrapper.setAttribute("data-visible", "false");
                 outside.removeEventListener;
             }
         }
@@ -369,8 +369,8 @@ cart_wrapper.addEventListener('touchstart', (e) => {
 });
 
 cart_wrapper.addEventListener('mouseleave', (e) => {
-    if (cart_wrapper.getAttribute("aria-expanded") == 'true') {
-        cart_wrapper.setAttribute("aria-expanded", "false");
+    if (cart_wrapper.getAttribute("data-visible") == 'true') {
+        cart_wrapper.setAttribute("data-visible", "false");
     }
 })
 
