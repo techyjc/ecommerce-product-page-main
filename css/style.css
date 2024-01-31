@@ -735,6 +735,19 @@ img {
         z-index: 100;
     }
 
+    .thumb[data-current="true"]::after,
+    .thumb-2[data-current="true"]::after {
+        background-color: hsla(0, 0%, 100%, 0.5);
+        border-radius: 10px;
+        content: '';
+        display: block;
+        height: 68px;
+        inset: 0;
+        margin: 0 auto;
+        position: absolute;
+        width: 67px;
+    }
+
     .thumb-img,
     .thumb-img-2 {
         border-radius: 10px;
