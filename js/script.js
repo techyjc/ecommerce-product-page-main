@@ -142,6 +142,7 @@ function find_currentThumb2() {
 function thumbclick2() {
     img_carousel_thumb2.forEach(function (c_image, index, arr) {
         let img_select = c_image.addEventListener('click', (e) => {
+            setimage(index)
             setimage2(index)
         });
     });
@@ -282,7 +283,6 @@ backward.addEventListener('click', (e) => {
 
 
 forward2.addEventListener('click', (e) => {
-    console.log('pressed f2');
     current_index = find_current2();
 
     if (current_index <= img_carousel2.length - 1) {
@@ -297,10 +297,10 @@ forward2.addEventListener('click', (e) => {
         img_carousel_thumb2[new_index].setAttribute('data-current', 'true');
         img_carousel_thumb2[current_index].setAttribute('data-current', 'false');
     }
+    setimage(new_index);
 });
 
 backward2.addEventListener('click', (e) => {
-    console.log('pressed f2');
     current_index = find_current2();
 
     if (current_index > 0) {
@@ -317,6 +317,7 @@ backward2.addEventListener('click', (e) => {
         img_carousel_thumb2[new_index].setAttribute('data-current', 'true');
         img_carousel_thumb2[current_index].setAttribute('data-current', 'false');
     }
+    setimage(new_index);
 });
 
 
