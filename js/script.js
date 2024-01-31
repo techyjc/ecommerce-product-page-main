@@ -1,4 +1,6 @@
 const ecommerce = document.querySelector('.ecommerce-wrapper');
+const primary_nav = document.querySelector('.primary-navigation');
+const navbar = document.querySelector('.menu-ctl');
 
 const img_carousel = document.querySelectorAll('.product-carousel-image');
 const img_carousel_thumb = document.querySelectorAll('.thumb');
@@ -37,6 +39,15 @@ let floatactive = 'false';
 
 let current_index = -1;
 let new_index = -1;
+
+navbar.addEventListener('click', (e) => {
+    let nav_state = primary_nav.getAttribute('aria-expanded');
+    if(nav_state == 'false') {
+        primary_nav.setAttribute('aria-expanded','true');  
+    }else{
+        primary_nav.setAttribute('aria-expanded','false');
+    }
+});
 
 product_carousel.addEventListener('click', (e) => {
     if (e.target.classList.contains("product-carousel-image")) {
