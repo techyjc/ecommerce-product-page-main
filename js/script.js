@@ -243,6 +243,7 @@ function addtocart(itemqty = 0, itemtotal = 0, itemunitvalue = 0, itemdesc = "Fu
 
 function removefromcart(cartitem) {
     cartitem.remove();
+    cart_hasitems();
 }
 
 
