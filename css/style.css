@@ -465,7 +465,16 @@ img {
     background-color: var(--primary-col-200);
 }
 
+.mycart-contents[data-hasitems="false"] ~ .mycart-checkout {
+    display: none;
+}
 
+.mycart-contents[data-hasitems="false"] {
+    display: flex;
+    align-items: center;
+    height: 175px;
+    justify-content: center;
+}
 
 
 /* Cart item styling */
