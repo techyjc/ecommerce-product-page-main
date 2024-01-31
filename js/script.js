@@ -31,6 +31,8 @@ const total_qty = document.querySelector('.product-qty');
 const cart_wrapper = document.querySelector('.mycart-wrapper');
 const my_basket = document.querySelector('.shopping-cart');
 const my_cart = document.querySelector('.mycart-contents');
+const cart_contents = document.querySelector('.mycart-contents');
+const cart_counter = document.querySelector('.cart-counter');
 
 const add2basket = document.querySelector('.add-2-cart');
 
@@ -42,10 +44,10 @@ let new_index = -1;
 
 navbar.addEventListener('click', (e) => {
     let nav_state = primary_nav.getAttribute('aria-expanded');
-    if(nav_state == 'false') {
-        primary_nav.setAttribute('aria-expanded','true');  
-    }else{
-        primary_nav.setAttribute('aria-expanded','false');
+    if (nav_state == 'false') {
+        primary_nav.setAttribute('aria-expanded', 'true');
+    } else {
+        primary_nav.setAttribute('aria-expanded', 'false');
     }
 });
 
@@ -62,7 +64,7 @@ product_carousel.addEventListener('click', (e) => {
 });
 
 close_carousel.addEventListener('click', (e) => {
-        float_carousel.setAttribute('data-visible', 'false');
+    float_carousel.setAttribute('data-visible', 'false');
 });
 
 
@@ -91,7 +93,6 @@ function find_currentThumb() {
 function thumbclick() {
     img_carousel_thumb.forEach(function (c_image, index, arr) {
         let img_select = c_image.addEventListener('click', (e) => {
-            console.log(index);
             setimage(index)
         });
     });
@@ -228,7 +229,7 @@ function addtocart(itemqty = 0, itemtotal = 0, itemunitvalue = 0, itemdesc = "Fu
         item_wrp.className = "cart-item item" + eval(my_cart.children.length + 1);
         my_cart.appendChild(item_wrp);
     }
-
+    cart_hasitems();
     let my_cartentries = document.querySelectorAll('.cart-item');
     my_cartentries.forEach((cart_entry, index) => {
         let item_remove = cart_entry.querySelector('.item-img-del');
@@ -353,7 +354,9 @@ add2basket.addEventListener("click", (e) => {
 my_basket.addEventListener('mouseover', (e) => {
     if (cart_wrapper.getAttribute("data-visible") == 'false') {
         cart_wrapper.setAttribute("data-visible", "true");
+        cart_hasitems();
     }
+    
 })
 
 cart_wrapper.addEventListener('touchstart', (e) => {
@@ -366,6 +369,7 @@ cart_wrapper.addEventListener('touchstart', (e) => {
             }
         }
     });
+    cart_hasitems();
 });
 
 cart_wrapper.addEventListener('mouseleave', (e) => {
@@ -374,5 +378,18 @@ cart_wrapper.addEventListener('mouseleave', (e) => {
     }
 })
 
+function cart_hasitems() {
+    let myentries = '';
+    myentries = document.querySelectorAll('.cart-item');
+    if(myentries.length < 1) {
+        cart_contents.setAttribute('data-hasitems','false');
+        cart_counter.setAttribute('data-cartcount', 'false');
+    }else{
+        cart_contents.setAttribute('data-hasitems','true');
+        cart_counter.setAttribute('data-cartcount', 'true');
+        cart_counter.innerHTML = myentries.length;
+    }
+}
+cart_hasitems();
 thumbclick();
 thumbclick2();

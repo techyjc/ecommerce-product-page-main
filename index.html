@@ -38,6 +38,7 @@
       </nav>
 
       <div class="shopping-cart" data-cart="false">
+        <div class="cart-counter" data-cartcount="false"></div>
         <img src="./images/icon-cart.svg" alt="My Shopping Cart">
       </div>
       <div class="avatar">
@@ -65,16 +66,16 @@
       <!-- thumbnail carousel -->
       <div class="carousel-thumbs">
         <div class="thumb" data-current="true">
-          <img src="./images/image-product-1-thumbnail.jpg" alt="" class="thumb-img" >
+          <img src="./images/image-product-1-thumbnail.jpg" alt="Product Image of sneakers" class="thumb-img" >
         </div>
         <div class="thumb" data-current="false">
-          <img src="./images/image-product-2-thumbnail.jpg" alt="" class="thumb-img" >
+          <img src="./images/image-product-2-thumbnail.jpg" alt="Product Image of sneakers" class="thumb-img" >
         </div>
         <div class="thumb" data-current="false">
-          <img src="./images/image-product-3-thumbnail.jpg" alt="" class="thumb-img">
+          <img src="./images/image-product-3-thumbnail.jpg" alt="Product Image of sneakers" class="thumb-img">
         </div>
         <div class="thumb" data-current="false">
-          <img src="./images/image-product-4-thumbnail.jpg" alt="" class="thumb-img">
+          <img src="./images/image-product-4-thumbnail.jpg" alt="Product Image of sneakers" class="thumb-img">
         </div>
       </div>
     </div>
@@ -112,10 +113,10 @@
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
       Coded by <a href="#">John Carruthers</a>.
     </footer>
-    <div class="mycart-wrapper" data-visible="false">
+    <div class="mycart-wrapper" data-visible="false" >
       <div class="mycart">
         <p class="mycart-title">Cart</p>
-        <div class="mycart-contents">
+        <div class="mycart-contents" data-hasitems="false">
           Your cart is empty.
         </div>
         <button class="mycart-checkout">Checkout</button>
