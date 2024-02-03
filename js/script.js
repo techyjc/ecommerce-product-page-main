@@ -385,6 +385,7 @@ function cart_hasitems() {
     if(myentries.length < 1) {
         cart_contents.setAttribute('data-hasitems','false');
         cart_counter.setAttribute('data-cartcount', 'false');
+        cart_contents.innerHTML = "Your cart is empty.";
     }else{
         cart_contents.setAttribute('data-hasitems','true');
         cart_counter.setAttribute('data-cartcount', 'true');
